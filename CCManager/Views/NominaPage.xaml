@@ -1,0 +1,295 @@
+﻿<Window x:Class="CCManager.Views.NominaPage" FontFamily="PMNCaeciliaSans Text"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CCManager.Views"
+        mc:Ignorable="d"
+        Title="NominaPage" Height="1080" Width="1920">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Panel.ZIndex="2" HorizontalAlignment="Left" Margin="0,0,0,750">
+            <Button Content="☰" FontSize="24" Width="40" Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Margin="-80,0,0,0"/>
+            <Ellipse Width="137" Height="137" Stroke="Black" StrokeThickness="2" Fill="Gray" Margin="0,50,0,0"/>
+        </StackPanel>
+
+        <!-- Sidebar -->
+        <Border Background="Transparent" Grid.Column="0" Grid.RowSpan="2">
+            <Border CornerRadius="50" Margin="0,154,0,-47" >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#1C2F5F" Offset="0"/>
+                        <GradientStop Color="#4B2C7D" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel HorizontalAlignment="Center" Width="250">
+
+                    <!-- Info Usuario -->
+                    <TextBlock Text="ING" Foreground="White" FontSize="36" FontWeight="Bold" TextAlignment="Center" Margin="0,100,0,10" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal"/>
+                    <TextBlock Text="Name" Foreground="White" FontSize="32" TextAlignment="Center" Margin="0,-10,0,20" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal"/>
+
+                    <!-- Botones de Menú -->
+                    <StackPanel VerticalAlignment="Top" Margin="0,10,0,0">
+                        <!-- Botón 1 -->
+                        <Border Background="#274288" CornerRadius="10" Margin="20,5">
+                            <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Image Source="/Images/icon_menu.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <TextBlock Text="Menu" FontSize="20" Foreground="White"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+
+                        <!-- Botón 2 -->
+                        <Border Background="#4772E3" CornerRadius="10" Margin="20,5">
+                            <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Image Source="/Images/icon_nomina.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <TextBlock Text="Nomina" FontSize="20" Foreground="White"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+
+                        <!-- Botón 3 -->
+                        <Border Background="#274288" CornerRadius="10" Margin="20,5">
+                            <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Image Source="/Images/icon_lista.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <TextBlock Text="Pase de lista" FontSize="20" Foreground="White"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+
+
+
+                    <!-- Logosut-->
+                    <StackPanel VerticalAlignment="Bottom" Margin="0,450,0,0">
+                        <Button Margin="0,20,0,0" Background="Transparent" Foreground="White" BorderBrush="Transparent" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/icon_lista.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                <TextBlock Text="Logout" FontSize="20" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Border>
+
+        <!-- Área de contenido principal -->
+        <Grid Grid.Column="1" Background="White" Grid.RowSpan="2">
+
+            <!-- Topbar -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" d:IsLocked="True">
+                <!-- Campana Notificaciones -->
+                <Button Width="30" Height="30" Background="Transparent" BorderBrush="Transparent" Content="🔔" FontSize="20" Margin="0,0,5,0"/>
+
+                <!-- Btn Minimizar -->
+                <Border Background="LightBlue" CornerRadius="30" Margin="0,0,5,0">
+                    <Button Width="30" Height="30" Background="Transparent" BorderBrush="Transparent" Content="-" FontSize="20" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal"/>
+                </Border>
+
+                <!-- Btn Cerrar -->
+                <Border Background="LightCoral" CornerRadius="30">
+                    <Button Width="30" Height="30" Background="Transparent" BorderBrush="Transparent" Content="X" FontSize="15" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal"/>
+                </Border>
+            </StackPanel>
+
+
+
+
+
+            <!-- Head Custom Options CORREGIDO -->
+            <StackPanel Margin="40,40,0,0">
+
+                <!-- Título -->
+                <TextBlock Text="Lista de personal y nomina" FontSize="26" FontWeight="Bold" Margin="10,10,0,10" FontFamily="PMNCaeciliaSans Text"/>
+
+                <!-- Contenedor de filtros -->
+                <Grid Margin="0,10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Primera fila: Obra + Periodo -->
+                    <TextBlock Text="Obra" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,5,0" FontSize="16" FontFamily="PMNCaeciliaSans Text"/>
+                    <Border Background="White" CornerRadius="10" BorderBrush="Blue" BorderThickness="1" Grid.Row="0" Grid.Column="1">
+                        <TextBox Width="200" Height="20" Margin="8,0" BorderThickness="0" FontFamily="PMNCaeciliaSans Text"/>
+                    </Border>
+
+                    <TextBlock Text="Periodo" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" Margin="0,0,5,0" FontSize="16" FontFamily="PMNCaeciliaSans Text"/>
+                    <Border Background="#C4C7EE" CornerRadius="10" BorderThickness="0" Grid.Row="0" Grid.Column="4">
+                        <TextBox Width="100" Height="20" Margin="8,0" BorderThickness="0" Background="#C4C7EE" FontFamily="PMNCaeciliaSans Text"/>
+                    </Border>
+
+                    <TextBlock Text="al" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" Margin="0,0,5,0" FontSize="16" FontFamily="PMNCaeciliaSans Text"/>
+                    <Border Background="#C4C7EE" CornerRadius="10" BorderThickness="0" Grid.Row="0" Grid.Column="7">
+                        <TextBox Width="100" Height="20" Margin="8,0" BorderThickness="0" Background="#C4C7EE" FontFamily="PMNCaeciliaSans Text"/>
+                    </Border>
+
+                    <!-- Botón Semana -->
+                    <Border Background="#4772E3" CornerRadius="10" Grid.Row="0" Grid.Column="9">
+                        <Button Content="Semana 1" Foreground="White" FontWeight="Bold" Padding="30,2" Background="Transparent" BorderThickness="0" FontSize="16" FontFamily="PMNCaeciliaSans Text"/>
+                    </Border>
+
+                    <!-- Segunda fila: Ubicación -->
+                    <TextBlock Text="Ubicación" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,10,5,0" FontSize="16" FontFamily="PMNCaeciliaSans Text"/>
+                    <Border Background="White" CornerRadius="10" BorderBrush="Blue" BorderThickness="1" Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
+                        <TextBox Width="200" Height="20" Margin="8,0" BorderThickness="0" FontFamily="PMNCaeciliaSans Text"/>
+                    </Border>
+
+                </Grid>
+
+                <!-- Botón Agregar Nuevo Personal -->
+                <Border CornerRadius="10" Background="#4772E3" Width="180" HorizontalAlignment="Right" Margin="0,10,80,0">
+                    <Button Content="+ Agregar Nuevo Personal" Width="180" Height="35" Background="Transparent" Foreground="White" FontWeight="Bold" BorderThickness="0" FontFamily="PMNCaeciliaSans Text"/>
+                </Border>
+
+            </StackPanel>
+
+
+
+
+
+            <!-- Tabs de Obras -->
+            <TabControl Margin="80,222,50,0" Background="Transparent" BorderBrush="Transparent">
+                <TabControl.Resources>
+
+                    <!-- Plantilla personalizada para TabItem -->
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border 
+                            Name="Border"
+                            Background="White" 
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            CornerRadius="5,5,0,0"
+                            Padding="10,0" Margin="0,0,10,0">
+                                        <ContentPresenter x:Name="ContentSite"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              ContentSource="Header"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#4772E3"/>
+                                            <Setter TargetName="Border" Property="BorderBrush" Value="#4772E3"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#DCE6F5"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="FontFamily" Value="PMNCaeciliaSans Text"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="Margin" Value="5,0,5,0"/>
+                    </Style>
+                </TabControl.Resources>
+
+                <!-- TabItem HOJA 1 -->
+                <TabItem Header="Obra 1" FontSize="16" Margin="5,3,5,0"/>
+                <TabItem Header="Obra 2" FontSize="16" Margin="5,3,5,0"/>
+                <TabItem Header="Obra 3" FontSize="16" Margin="5,3,5,0"/>
+                <TabItem Header="+" FontSize="16" Margin="5,3,5,0"/>
+            </TabControl>
+
+            <!-- Border para el contenido -->
+            <Border Background="#E5E5E5" Margin="40,247,40,119" CornerRadius="35">
+                <StackPanel Margin="20">
+
+                    <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column"
+                  Background="White" AlternatingRowBackground="#F9F9F9"
+                  BorderThickness="0" RowHeaderWidth="0" GridLinesVisibility="None">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="#" Width="30" Binding="{Binding Numero}" />
+                            <DataGridTextColumn Header="Nombre" Width="*" Binding="{Binding Nombre}" />
+                            <DataGridTextColumn Header="Categoría" Width="100" Binding="{Binding Categoria}" />
+                            <DataGridTextColumn Header="Días Trabajados" Width="150" Binding="{Binding DiasTrabajados}" />
+                            <DataGridTextColumn Header="Días" Width="40" Binding="{Binding Dias}" />
+                            <DataGridTextColumn Header="Sueldo por Jornada" Width="150" Binding="{Binding SueldoJornada}" />
+                            <DataGridTextColumn Header="Sueldo Semanal" Width="120" Binding="{Binding SueldoSemanal}" />
+                            <DataGridTextColumn Header="Horas Extra" Width="90" Binding="{Binding HorasExtra}" />
+                            <DataGridTextColumn Header="Precio por Hora Extra" Width="150" Binding="{Binding PrecioHoraExtra}" />
+                            <DataGridTextColumn Header="Sueldo Extra" Width="100" Binding="{Binding SueldoExtra}" />
+                            <DataGridTextColumn Header="Prestamos" Width="100" Binding="{Binding Prestamos}" />
+                            <DataGridTextColumn Header="Sueldo Trabajado" Width="130" Binding="{Binding SueldoTrabajado}" />
+                            <DataGridTextColumn Header="SUELDO TOTAL" Width="150" Binding="{Binding SueldoTotal}" />
+                            <DataGridTemplateColumn Header="Operaciones" Width="100">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Width="25" Height="25" Background="LightBlue" BorderBrush="Transparent" Margin="2">
+                                                <Image Source="/Images/edit_icon.png" Stretch="Uniform"/>
+                                            </Button>
+                                            <Button Width="25" Height="25" Background="LightCoral" BorderBrush="Transparent" Margin="2">
+                                                <Image Source="/Images/delete_icon.png" Stretch="Uniform"/>
+                                            </Button>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+
+                </StackPanel>
+            </Border>
+
+
+            <!-- FOOTER -->
+            <Border Margin="40,959,40,40" Background="#E5E5E5" CornerRadius="20">
+
+                <StackPanel Margin="20" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+                    <!-- Resumen Totales-->
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0">
+                        <TextBlock Text="Total de Personal" VerticalAlignment="Center" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontSize="18" Margin="0,0,10,0"/>
+
+                        <Border Background="#4772E3" CornerRadius="5" Padding="0" VerticalAlignment="Center">
+                            <TextBox Width="33" Height="25" Text="20" TextAlignment="Center" IsReadOnly="True" BorderThickness="0" Background="Transparent" Foreground="White" FontFamily="PMNCaeciliaSans Text" FontSize="16"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+
+
+            </Border>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
