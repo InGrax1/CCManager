@@ -47,7 +47,7 @@
                         <Border Background="#4772E3" CornerRadius="10" Margin="20,5">
                             <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Image Source="/Images/icon_menu.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <Image Source="/Images/home.png" Width="25" Height="25" Margin="10,0,5,0"/>
                                     <TextBlock Text="Menu" FontSize="20" Foreground="White"/>
                                 </StackPanel>
                             </Button>
@@ -57,7 +57,7 @@
                         <Border Background="#274288" CornerRadius="10" Margin="20,5">
                             <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Image Source="/Images/icon_nomina.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <Image Source="/Images/money.png" Width="25" Height="25" Margin="10,0,5,0"/>
                                     <TextBlock Text="Nomina" FontSize="20" Foreground="White"/>
                                 </StackPanel>
                             </Button>
@@ -67,7 +67,7 @@
                         <Border Background="#274288" CornerRadius="10" Margin="20,5">
                             <Button Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" FontFamily="PMNCaeciliaSans Text" FontStyle="Normal">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Image Source="/Images/icon_lista.png" Width="20" Height="20" Margin="10,0,5,0"/>
+                                    <Image Source="/Images/lista.png" Width="25" Height="25" Margin="10,0,5,0"/>
                                     <TextBlock Text="Pase de lista" FontSize="20" Foreground="White"/>
                                 </StackPanel>
                             </Button>
